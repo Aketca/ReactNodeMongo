@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes,
@@ -8,7 +8,7 @@ import { BrowserRouter, Routes,
 import Expenses from "./pages/page1";
 import Invoices from "./pages/page2";
 
-import './custom.scss';
+import './styles/custom.scss';
 
 ReactDOM.render(
   <React.StrictMode>
