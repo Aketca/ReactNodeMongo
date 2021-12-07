@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.scss";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
+import { Link } from "react-router-dom";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -41,6 +42,10 @@ export default class App extends React.Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-xs-12 col-sm-8 col-md-8 offset-md-2">
+              <nav>
+                <Link to="/page1">Page1</Link>
+                <Link to="/page2">Page2</Link>
+              </nav>
               <h1>Todos</h1>
               <div className="todo-app">
                 <AddTodo handleAddTodo={this.handleAddTodo} />
