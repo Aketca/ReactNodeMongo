@@ -2,29 +2,29 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./styles/App.scss";
 import AddTodo from "./components/AddTodo";
-import TodoList from "./components/TodoList";
+// import TodoList from "./components/TodoList";
 import { Link } from "react-router-dom";
 
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos]: Array<any> = useState([]);
 
   useEffect(()=>{
     axios
       .get("/api")
-      .then((response) => {
+      .then((response: any) => {
         setTodos(response.data.data);
       })
-      .catch((e) => console.log("Error : ", e));
+      .catch((e: Object) => console.log("Error : ", e));
   }, []);
 
-  const handleAddTodo = (value) => {
+  const handleAddTodo = (value : any) => {
     axios
       .post("/api/todos", { text: value })
       .then(() => {
         setTodos([...todos, { text: value }]);
       })
-      .catch((e) => console.log("Error : ", e));
+      .catch((e : null | {}) => console.log("Error : ", e));
   };
   return (
     <div className="App container">
@@ -38,7 +38,7 @@ const App = () => {
             <h1>Todos</h1>
             <div className="todo-app">
               <AddTodo handleAddTodo={handleAddTodo} />
-              <TodoList todos={todos} />
+              {/* <TodoList todos={todos} /> */}
             </div>
           </div>
         </div>

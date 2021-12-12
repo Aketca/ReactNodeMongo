@@ -1,7 +1,9 @@
 import React from "react";
-
-const addTodo = ({handleAddTodo}) => {
-  const handleSubmit = (e) => {
+interface Props {
+  handleAddTodo: (value: any) => void;
+}
+const addTodo = ({handleAddTodo}:Props) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     const { value } = e.target.elements.value;
     if (value.length > 0) {
@@ -30,4 +32,4 @@ const addTodo = ({handleAddTodo}) => {
   )
 }
 
-export default addTodo();
+export default addTodo;
