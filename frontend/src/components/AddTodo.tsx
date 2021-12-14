@@ -1,7 +1,9 @@
 import React from "react";
+
 interface Props {
   handleAddTodo: (value: any) => void;
 }
+
 const addTodo = ({handleAddTodo}:Props) => {
   const handleSubmit = (e: any) => {
     e.preventDefault();

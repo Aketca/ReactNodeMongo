@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./styles/App.scss";
 import AddTodo from "./components/AddTodo";
-// import TodoList from "./components/TodoList";
+import TodoList from "./components/TodoList";
 import { Link } from "react-router-dom";
 
 
@@ -38,7 +38,7 @@ const App = () => {
             <h1>Todos</h1>
             <div className="todo-app">
               <AddTodo handleAddTodo={handleAddTodo} />
-              {/* <TodoList todos={todos} /> */}
+               <TodoList todos={todos} />
             </div>
           </div>
         </div>
