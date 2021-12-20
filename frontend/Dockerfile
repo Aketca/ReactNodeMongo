@@ -1,5 +1,5 @@
 # Create image based on the official Node image from dockerhub
-FROM node:lts-buster
+FROM node:16
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -18,7 +18,7 @@ RUN npm ci
 COPY . /usr/src/app
 
 # Expose the port the app runs in
-EXPOSE 3000
+EXPOSE 5555
 
 # Serve the app
 CMD ["npm", "start"]

@@ -2,7 +2,7 @@ services:
   frontend:
     build: frontend
     ports:
-      - 3000:3000
+      - 5555:5555
     stdin_open: true
     volumes:
       - ./frontend:/usr/src/app
@@ -27,7 +27,7 @@ services:
       - express-mongo
       - react-express
     expose: 
-      - 3000
+      - 5555
   mongo:
     container_name: mongo
     restart: always
